@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>BlueFood</title>
+        <link rel="stylesheet" type="text/css" href="css/bf_estiloSistema.css"/>
+    </head>
+    <body>
+        <!--Cabeçalho Início-->
+        <header>
+            <div id="logotipoSistema">
+                <span id="spanAuxiliarDeAlinhamentoVertical"></span>
+                <a href="">
+                    <img id="imgLogoTipoSistema" src="images/bf_logotipoSistema.png" />
+                </a>
+            </div>
+            <div>
+                Olá nome do usuário!
+            </div>
+        </header>
+        <br/><br/>
+        <!--Cabeçalho Fim-->
+
+        <div>
+            <h1>Cadastro de Restaurante</h1>
+            <br/>
+            <div>
+                <fieldset>
+                    <form method="POST" action="">
+
+                        <div>
+                            <label for="nome">Nome do Restaurante:</label><br/>
+                            <input type="text" placeholder="Nome" name="nome" id="nome" />
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="cnpj">CNPJ:</label><br/>
+                            <input type="text" placeholder="CNPJ" name="cnpj" id="cnpj" />
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="email">E-mail:</label><br/>
+                            <input type="email" placeholder="Email" name="email" id="email" />
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="telefone">Telefone:</label><br/>
+                            <input type="text" placeholder="CNPJ" name="telefone" id="telefone" />
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="cep">CEP:</label><br/>
+                            <input type="text" placeholder="CEP" name="cep" id="cep" />
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="categoria_comida">Categoria de comida:</label><br/>
+                            <select name="categoria_comida" id="categoria_comida">
+                                <option>Salada</option>
+                                <option>Hamburguer</option>
+                                <option>Pizza</option>
+                                <option>Churrasco</option>
+                            </select>
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="logotipo">Logotipo:</label><br/>
+                            <input type="file" name="logotipo" id="logotipo" />
+                        </div>
+                        <br/>
+                        
+                        <div>
+                            <label for="senha">Senha:</label><br/>
+                            <input type="password" placeholder="Senha" name="senha" id="senha" />
+                        </div>
+                        <br/>
+                        
+                        <div id="mensagemDeErro">
+                            Aqui vai um exemplo de mensagem de erro
+                        </div>
+                        <br/>
+                        <div>
+                            <input type="button" value="Cadastrar" />
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+            <br/>
+
+            <div>
+                <input type="button" value="Voltar" />
+            </div>
+        </div>
+
+        <!--Rodapé Início-->
+        <!--Rodapé Fim-->
+    </body>
+</html>

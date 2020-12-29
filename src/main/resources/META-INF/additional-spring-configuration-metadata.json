@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "spring.datasource.inicialization-mode",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.inicialization-mode'"
+  },
+  {
+    "name": "bluefood.files.logotipos",
+    "type": "java.lang.String",
+    "description": "A description for 'bluefood.files.logotipos'"
+  }
+]}

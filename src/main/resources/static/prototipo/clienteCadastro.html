@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>BlueFood</title>
+        <link rel="stylesheet" type="text/css" href="css/bf_estiloSistema.css"/>
+    </head>
+    <body>
+        <!--Cabeçalho Início-->
+        <header>
+            <div id="logotipoSistema">
+                <span id="spanAuxiliarDeAlinhamentoVertical"></span>
+                <a href="">
+                    <img id="imgLogoTipoSistema" src="images/bf_logotipoSistema.png" />
+                </a>
+            </div>
+        </header>
+        <br><br>
+        <!--Cabeçalho Fim-->
+
+        <div>
+
+            <h1>Cadastro de Cliente</h1>
+            <br/>
+            <div id="mensagemDeSucesso">
+                Aqui vai exemplo de mensagem de sucesso
+            </div>
+            <br/>
+
+            <form method="POST" action="">
+
+                <fieldset>
+                    <label for="nome">Nome: </label><br/>
+                    <input type="text" placeholder="Nome" id="nome" name="nome"/><br/><br/>
+                    
+                    <div id="mensagemDeErro">
+                        Exemplo de mensagem de erro
+                    </div>
+
+                    <label for="cpf">CPF: </label><br/>
+                    <input type="text" placeholder="CPF" id="cpf" name="cpf"/><br/><br/>
+
+                    <label for="email">E-mail: </label><br/>
+                    <input type="text" placeholder="E-mail" id="email" name="email"/><br/><br/>
+
+                    <label for="telefone">Telefone: </label><br/>
+                    <input type="text" placeholder="Telefone" id="telefone" name="telefone"/><br/><br/>
+
+                    <label for="cep">CEP: </label><br/>
+                    <input class="input-error" type="text" placeholder="CEP" id="cep" name="cep"/><br/><br/>
+
+                    <label for="senha">Senha: </label><br/>
+                    <input type="password" placeholder="Senha" id="senha" name="senha"/><br/><br/>
+
+                    <input type="button" value="Cadastrar"/>
+                </fieldset>
+
+            </form>
+            <br/>
+
+            <input type="button" value="Voltar" />
+
+        </div>
+
+        <!--Rodapé Início-->
+        <!--Rodapé Fim-->
+    </body>
+</html>

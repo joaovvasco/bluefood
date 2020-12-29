@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/layout/cliente-layout}">
+    
+    <body>
+        <div layout:fragment="contentCliente">
+
+            <form id="form" method="GET" th:object="${filtro}" th:action="@{/cliente/busca}">
+		        <div>
+		            <h1>É hora de rangar!</h1>
+		            <br/>
+		                <fieldset>
+		                    <input type="hidden" id="searchType" th:field="*{searchType}"/>
+		                    <input type="hidden" id="categoriaId" th:field="*{categoriaId}"/>
+		                    <input type="text" name="busca" th:field="*{texto}" placeholder="Buscar por..."/>
+		
+		                    <input type="submit" value="Procurar" onclick="searchRest(null);"/>
+		                </fieldset>
+		        </div>
+		
+		        <div class="divCategoriasComidaGeral">
+		
+		            <div class="divCategoriasComidaOpcao" th:each="categoria : ${categorias}">
+		                <a href="#" th:onclick="'searchRest(' + ${categoria.id}+ ')'">
+		                    <img th:src="@{/images/categorias/} + ${categoria.imagem}" /><br/>
+		                    <span th:text="${categoria.nome}"></span>
+		                </a>
+		            </div>
+		        </div>
+            </form>
+	
+	        <div>
+	            <h1>Cupons disponíveis</h1><br/>
+	            <input type="button" value="10% Hamburguer"/><br/>
+	            <input type="button" value="15% de Pizza" /> <br/>
+	        </div>
+	
+	        <div>
+	            <h1>Últimos Pedidos</h1><br/>
+	            
+	            <div th:each="pedido : ${pedidos}">
+	            	<input type="button" th:value="${pedido.formattedId}+' '+${pedido.restaurante.nome}" 
+	            	th:onclick="'location.href=\'' + @{/cliente/pedido/view} + '?pedidoId=' + ${pedido.id} + '\';'"/> <br/>
+	            	<br/>
+	            </div>
+	            <div th:if="${pedidos.size() == 0}">
+	            	<span>Não possui pedidos anteriores!</span><br/><br/>
+	            </div>
+	        </div>
+	
+	        <div>
+	            <h1>Conta</h1><br/>
+	            <input type="button" value="Meus Dados" th:onclick="'location.href=\''+@{/cliente/edit}+'\';'"/>
+	            <input type="button" value="Sair" th:onclick="'location.href=\''+@{/logout}+'\';'"/>
+	        </div>
+		</div>
+    </body>
+</html>
